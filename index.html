@@ -138,7 +138,6 @@
     const totalSlides = slides.children.length;
     const dotsContainer = document.getElementById("dotsContainer");
     let index = 0;
-    let autoSlideInterval;
   
     // Create the navigation dots
     for (let i = 0; i < totalSlides; i++) {
@@ -173,25 +172,15 @@
       });
     }
   
-    function startAutoSlide() {
-      autoSlideInterval = setInterval(() => {
-        moveSlide(1);
-      }, 3000); // 5000ms = 5 seconds
-    }
+    // Auto-slide every 5 seconds
+    setInterval(() => {
+      moveSlide(1);
+    }, 5000);
   
-    function stopAutoSlide() {
-      clearInterval(autoSlideInterval);
-    }
-  
-    // Start autoplay
-    updateDots(); // Initialize dots
-    startAutoSlide();
-  
-    // Optional: Pause autoplay on mouse hover
-    const carousel = document.querySelector(".carousel");
-    carousel.addEventListener("mouseenter", stopAutoSlide);
-    carousel.addEventListener("mouseleave", startAutoSlide);
+    // Initialize
+    updateDots();
   </script>
+  
 
 </body>
 </html>
