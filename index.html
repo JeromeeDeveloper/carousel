@@ -20,8 +20,8 @@
     }
 
     .carousel {
-      width: 1000px;
-      height: 562px;
+      width: 2500px;
+      height: 1406px;
       position: relative;
       overflow: hidden;
       border-radius: 10px;
@@ -35,8 +35,8 @@
     }
 
     .slides img {
-      width: 1000px;
-      height: 562px;
+      width: 2500px;
+      height: 1406px;
       object-fit: cover;
       flex-shrink: 0;
     }
@@ -91,7 +91,7 @@
       index += direction;
       if (index < 0) index = totalSlides - 1;
       if (index >= totalSlides) index = 0;
-      slides.style.transform = `translateX(-${index * 1000}px)`;
+      slides.style.transform = `translateX(-${index * 2500}px)`;
     }
   </script>
 
